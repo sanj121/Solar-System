@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0a0a2a, #000);
+  margin: 0;
+  overflow: hidden;
+  color: white;
+}
+
+#solar-system {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+  perspective-origin: center;
+  transform-style: preserve-3d; /* Add this for better 3D rendering */
+}
+
+.sun, .planet {
+  position: absolute;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden; /* Add this to improve rendering performance */
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  background: url('images/sun.jpg') no-repeat center/cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 50px yellow, 0 0 100px orange, 0 0 150px red;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  border-radius: 50%; /* Make the border circular */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Solid semi-transparent border */
+}
+
+.mercury-orbit { width: 200px; height: 200px; margin-left: -100px; margin-top: -100px; }
+.venus-orbit { width: 300px; height: 300px; margin-left: -150px; margin-top: -150px; }
+.earth-orbit { width: 400px; height: 400px; margin-left: -200px; margin-top: -200px; }
+.mars-orbit { width: 500px; height: 500px; margin-left: -250px; margin-top: -250px; }
+.jupiter-orbit { width: 600px; height: 600px; margin-left: -300px; margin-top: -300px; }
+.saturn-orbit { width: 700px; height: 700px; margin-left: -350px; margin-top: -350px; }
+.uranus-orbit { width: 800px; height: 800px; margin-left: -400px; margin-top: -400px; }
+.neptune-orbit { width: 900px; height: 900px; margin-left: -450px; margin-top: -450px; }
+
+.planet {
+  background-size: cover;
+  background-position: center;
+  top: 0;  /* Position at the top edge of the orbit */
+  left: 50%;  /* Center horizontally */
+  transform: translate(-50%, -50%);  /* Adjust for centering */
+  backface-visibility: hidden; /* Add this to improve rendering performance */
+}
+
+.mercury { width: 15px; height: 15px; background: url('images/mercury.jpg') no-repeat center/cover; }
+.venus { width: 25px; height: 25px; background: url('images/venus.jpg') no-repeat center/cover; }
+.earth { width: 30px; height: 30px; background: url('images/earth.jpg') no-repeat center/cover; }
+.mars { width: 20px; height: 20px; background: url('images/mars.jpg') no-repeat center/cover; }
+.jupiter { width: 50px; height: 50px; background: url('images/jupiter.jpg') no-repeat center/cover; }
+.saturn { width: 40px; height: 40px; background: url('images/saturn.jpg') no-repeat center/cover; }
+.uranus { width: 35px; height: 35px; background: url('images/uranus.jpg') no-repeat center/cover; }
+.neptune { width: 35px; height: 35px; background: url('images/neptune.jpg') no-repeat center/cover; }
+
+.moon-orbit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  transform-origin: center;
+  border-radius: 50%; /* Make the border circular */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Solid semi-transparent border */
+}
+
+.moon {
+  width: 10px;
+  height: 10px;
+  background: url('images/moon.jpg') no-repeat center/cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  backface-visibility: hidden; /* Add this to improve rendering performance */
+}
+
+.mercury-moon { background: url('images/moon.jpg') no-repeat center/cover; }
+.venus-moon { background: url('images/moon.jpg') no-repeat center/cover; }
+.earth-moon { background: url('images/moon.jpg') no-repeat center/cover; }
+.mars-moon { background: url('images/moon.jpg') no-repeat center/cover; }
+.jupiter-moon { background: url('images/moon.jpg') no-repeat center/cover; }
+.saturn-moon { background: url('images/moon.jpg') no-repeat center/cover; }
+.uranus-moon { background: url('images/moon.jpg') no-repeat center/cover; }
+.neptune-moon { background: url('images/moon.jpg') no-repeat center/cover; }
